@@ -26,7 +26,7 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vimrc
 
-git clone https://github.com/steventing/vimrc.git ~/vimrc
+git clone https://github.com/CYIYO/vimrc.git ~/vimrc
 //if .vimrc and .vim exist, remove if first and do the following cmd
 ln -s ~/vimrc/.vimrc ~/.vimrc
 ln -s ~/vimrc/.vim ~/.vim
