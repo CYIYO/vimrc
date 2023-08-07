@@ -13,6 +13,7 @@ Plug 'junegunn/gv.vim'
 Plug 'majutsushi/tagbar'
 Plug 'thaerkh/vim-workspace'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'dhananjaylatkar/cscope_maps.nvim' " cscope keymaps
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
