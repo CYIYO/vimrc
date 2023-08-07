@@ -1,7 +1,7 @@
 vimrc
 =====
 
-StevenTing's vimrc
+Yiyo's vimrc
 
 
 Quick start
