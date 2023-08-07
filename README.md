@@ -40,13 +40,12 @@ tmux color issue:
 ```
 add  "set -g default-terminal "xterm""  to ~/.tmux.conf 
 ```
-Other Plugin:
+Other Plugin needed:
 ```
 sudo apt install cscope
 sudo apt install universal-ctags
 ```
 nerd font download:
-===
 ```
 https://github.com/Karmenzind/monaco-nerd-fonts
 ```
