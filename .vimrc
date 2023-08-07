@@ -79,6 +79,7 @@ set laststatus=2                       " The last window will always have a stat
 set incsearch
 set splitright
 set statusline+=%{get(b:,'gitsigns_status','')}
+set mouse=r
 
 " How many tenths of a second to blink when matching brackets
 set mat=2
@@ -291,7 +292,7 @@ nmap <Leader>m :tabm<CR>
 "set cscopeverbose
 "set cscopeprg='gtags-cscope'
 nmap <F8> :!ctags -R --sort=yes --c++-kinds=+px --fields=+iaS --extra=+q .<CR>
-nmap <F7> :!find -L . -iname '*.[ch]' > cscope.files <CR> :!cscope -Rb<CR>:cs kill -1 <CR>:cs add cscope.out<CR><CR>
+"nmap <F7> :!find -L . -iname '*.[ch]' > cscope.files <CR> :!cscope -Rb<CR>:cs kill -1 <CR>:cs add cscope.out<CR><CR>
 "nmap <F7> :!find -L . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' > cscope.files ;
             "\:!cscope -b -i cscope.files -f cscope.out<CR>
             "\:cs kill -1<CR>:cs add cscope.out<CR>
@@ -460,6 +461,10 @@ EOF
 	nmap <Leader>gst :Git<CR>
 	nmap <Leader>glo :Gclog<CR>
 	nmap <Leader>gvd :Gvdiffsplit
+lua << EOF
+    require("cscope_maps").setup()
+EOF
+nmap <F7> :!find -L . -iname '*.[ch]' > cscope.files <CR> :!cscope -Rb<CR><CR>
 
 
 	""""""""""""""""""""""""""""""
@@ -695,7 +700,6 @@ EOF
 " clangd
 lua <<EOF
 -- require'lspconfig'.pyright.setup{}
-require'lspconfig'.clangd.setup{}
 -- require'lspconfig'.gdscript.setup{}
 
 -- Mappings.
@@ -733,17 +737,6 @@ end
 -- map buffer local keybindings when the language server attaches
 -- local servers = { 'pyright', 'rust_analyzer', 'clangd', 'gdscript' }
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-local servers = {'clangd'}
-for _, lsp in pairs(servers) do
-  require('lspconfig')[lsp].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    flags = {
-      -- This will be the default in neovim 0.7+
-      debounce_text_changes = 150,
-    }
-  }
-end
 EOF
 
 " auto complete
