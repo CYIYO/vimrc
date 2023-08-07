@@ -36,6 +36,11 @@ In vim execute :PlugInstall
 
 NOTE
 ----------
+Other Plugin:
+```
+apt install cscope
+apt install universal-ctags
+```
 nerd font download:
 ===
 ```
