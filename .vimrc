@@ -12,7 +12,7 @@ Plug 'junegunn/gv.vim'
 "Plug 'preservim/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'thaerkh/vim-workspace'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'branch': 'v0.8.0'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
