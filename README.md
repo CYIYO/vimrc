@@ -27,7 +27,7 @@ let &packpath = &runtimepath
 source ~/.vimrc
 
 git clone https://github.com/CYIYO/vimrc.git ~/vimrc
-//if .vimrc and .vim exist, remove if first and do the following cmd
+//if .vimrc and .vim exist, remove it first and do the following cmd
 ln -s ~/vimrc/.vimrc ~/.vimrc
 ln -s ~/vimrc/.vim ~/.vim
 
@@ -36,10 +36,14 @@ In vim execute :PlugInstall
 
 NOTE
 ----------
+tmux color issue:
+```
+add  "set -g default-terminal "xterm""  to ~/.tmux.conf 
+```
 Other Plugin:
 ```
-apt install cscope
-apt install universal-ctags
+sudo apt install cscope
+sudo apt install universal-ctags
 ```
 nerd font download:
 ===
