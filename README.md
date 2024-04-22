@@ -31,6 +31,8 @@ git clone https://github.com/CYIYO/vimrc.git ~/vimrc
 ln -s ~/vimrc/.vimrc ~/.vimrc
 ln -s ~/vimrc/.vim ~/.vim
 
+//instal vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 In vim execute :PlugInstall
 ```
 
