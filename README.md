@@ -50,7 +50,11 @@ NOTE
 ----------
 tmux color issue:
 ```
-add  "set -g default-terminal "xterm""  to ~/.tmux.conf 
+add  "set -g default-terminal "xterm""  to ~/.tmux.conf
+
+or
+
+tmux -2
 ```
 Other Plugin needed:
 ```
