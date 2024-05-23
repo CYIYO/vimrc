@@ -11,9 +11,19 @@ Quick start
 //Switch to neovim
 //Install neovim with newest stable version
 
-sudo add-apt-repository ppa:neovim-ppa/stable
-sudo apt-get update
-sudo apt-get install neovim
+AppImage ("universal" Linux package)
+The Releases page provides an AppImage that runs on most Linux systems. No installation is needed, just download nvim.appimage and run it. (It might not work if your Linux distribution is more than 4 years old.)
+
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage
+To expose nvim globally:
+
+mkdir -p /opt/nvim
+mv nvim.appimage /opt/nvim/nvim
+And the following line to ~/.bashrc:
+
+export PATH="$PATH:/opt/nvim/"
 
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
